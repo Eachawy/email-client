@@ -1,0 +1,10 @@
+{
+    "name": "email-api-web",
+    "private": true,
+    "scripts": {
+        "build": "npx esbuild src/client.js --bundle --format=iife --global-name=EmailClient --outfile=dist/email-client.js"
+    },
+    "devDependencies": {
+        "esbuild": "^0.24.0"
+    }
+}

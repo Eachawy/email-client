@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<body>
+    <form id="contactForm">
+        <input name="name" placeholder="Name" required />
+        <input name="email" placeholder="Email" required />
+        <input name="subject" placeholder="Subject" required />
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+
+    <p id="status"></p>
+
+    <script src="./dist/email-client.js"></script>
+    <script>
+        // Put your API URL here (wherever your Node server is hosted)
+        EmailClient.wireUp("#contactForm", "http://localhost:3000", "#status");
+    </script>
+</body>
+
+</html>
